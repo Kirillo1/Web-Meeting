@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <form action="{% url 'meet:create_meet' %}" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ meet_forms.name }}<br>
+            {{ meet_forms.last_name }}<br>
+            {{ meet_forms.date_of_birthday }}<br>
+            {{ meet_forms.city }}<br>
+            {{ meet_forms.images }}<br>
+            {{ meet_forms.children }}<br>
+            {{ meet_forms.dating }}<br>
+            {{ meet_forms.height }}<br>
+            {{ meet_forms.family_status }}<br>
+            {{ meet_forms.hobbies }}<br>
+            {{ meet_forms.addictions }}<br>
+            {{ meet_forms.about_me }}<br>
+            {{ meet_forms.taboo }}<br>
+            {{ meet_forms.life_with_mom }}<br>
+            {{ meet_forms.zodiac_sign }}<br>
+            {{ meet_forms.gender }}<br>
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+
+    </form>
+{% endblock %}
